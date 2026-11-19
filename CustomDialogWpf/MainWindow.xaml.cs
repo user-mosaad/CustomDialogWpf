@@ -20,5 +20,15 @@ namespace CustomDialogWpf
         {
             InitializeComponent();
         }
+
+        private void btnEnterName_Click(object sender, RoutedEventArgs e)
+        {
+            InputDialogSample inputDialogSample = new InputDialogSample("Please enter your name:", "John Doe");
+
+            if (inputDialogSample.ShowDialog() == true)
+            {
+                lblName.Text = inputDialogSample.Answer;
+            }
+        }
     }
 }
